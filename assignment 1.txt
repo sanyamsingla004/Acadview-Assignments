@@ -1,0 +1,19 @@
+Q1 Print Hello word
+Sol-
+   class Java
+   {
+    public static void main (string args[])
+	 {
+	  System.out.prntln("Hello");
+	 }
+	} 
+	
+Q2 Print Name
+sol-
+     class Acadview
+	 {
+	  public void main (string args[])
+	  {
+	   System.out.prntln("my name is sanyam");
+	  }
+	 } 
