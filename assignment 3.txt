@@ -1,0 +1,211 @@
+Q1 Pattern
+Sol- 
+    class Pattern 
+     {
+       public static void main(String args[])
+        {
+         for(int i=4;i>=0;i--)
+          {
+            for(int j=0;j<=i;j++)
+             {
+                System.out.print("*");
+             }
+                System.out.println("   ");
+          }
+      }
+    }
+
+Q2 Enter a N number from user Find even no. upto N
+Sol-
+	package Even;
+	import java.util.Scanner; 
+	class Even
+	{
+	  public static void main (String args[])
+	     {
+		Scanner apple=new Scanner(System.in);
+		System.out.print("Enter a number : ");
+                
+		int search=apple.nextInt();
+                
+                for(int i=0;i<=search;i=i+2)
+                   {
+                    System.out.print("even no.");
+                    System.out.println(+i);
+                   }
+	     }
+	}
+ 
+Q3 Enter a N number from user Find prime no. upto N
+Sol-
+       import java.util.Scanner;
+
+       class Prime
+       {
+	 public static void main(String s[])
+            {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter a number : ");
+		int n = scan.nextInt();
+		
+		System.out.println("Prime no's upto "+n+" are : \n");
+		if(n<=1)
+			System.out.println("No Prime no's.");
+		if(n == 2 )
+			System.out.println(+n);
+		if(n>2){
+			int flag=0;
+			for (int i=2 ; i<=n ; i++){
+				for (int j=2 ; j<=i/2 ; j++){
+					if(i%j == 0){
+						flag=1;
+						break;
+					}
+				}
+				if (flag == 0)
+					System.out.println("Prime "+i);
+				else
+					flag=0;
+			  }
+		    }
+	       }
+	}
+
+Q4 Number is Armsrtong or not
+sol-
+     
+	package armstrong;
+	import java.util.Scanner;
+	public class Armstrong
+	{
+         public static void main(String[] args)
+          {
+            Scanner apple=new Scanner(System.in);
+            System.out.print("Enter a number : ");
+        
+       	    int Search=apple.nextInt();
+            int i,last,sum=0,cube;
+        
+            for(i=Search;i>0;i=i/10)
+              {
+                last=i%10;
+                cube=last*last*last;
+                sum=sum+cube;
+              }
+               if(Search==sum)
+               System.out.println("no. is armstrong");
+               else
+               System.out.println("no. is NOT armstrong");
+          }
+    
+	}
+
+Q5 Take no. Find reverse
+sol-
+    package reverse;
+    import java. util.Scanner;
+    public class Reverse 
+    {
+     public static void main(String[] args)
+      {
+       Scanner apple=new Scanner (System.in);
+       System.out.print("Enter a number : ");
+     
+       int Search=apple.nextInt();
+       int i,rev=0;
+     
+       for(i=Search;i>0;i=i/10)
+       {
+        rev=rev*10;
+        rev=rev+i%10;
+      }
+       System.out.print("the reverse is  "+rev);
+     }
+    
+    }
+
+Q6 Given array A={1,1,1,1,0,0,1,0}.Sort in ascending{0,0,0,1,1,1,1,1}
+Sol-
+    class Sort
+    {
+      public static void main(String s[])
+	{
+		
+	    int a[]= new int[]{1,1,1,1,0,0,1,0};
+	    int n = a.length;
+		
+	    System.out.print("\n Given array is : ");
+	    for( int i=0 ; i<n ; i++)
+      	    System.out.print(" " +a[i]);
+		
+		
+	    int loc=0;
+	    for (int i=0 ; i<n ;i++)
+             {
+               if(a[i] == 0)
+               {
+	        a[loc]=0;
+	        a[i]=1;
+	        loc++;
+	       }
+	      }
+		
+	     System.out.print("\n\n Sorted array is : ");
+	     for( int i=0 ; i<n ;i++)
+             System.out.print(" " +a[i]);
+		
+	   }
+      }
+
+Q7 Given sorted array A={1,4,6,7,8,9,10}.Write program to take any no. from user and check if it array not or not.
+Sol-
+    import java.util.Scanner;
+
+    class Search
+    {
+    public static void main(String s[])
+     {
+		
+        int a[] = new int[]{1,4,6,7,8,9,10};
+	System.out.print("\n Given array is : ");
+		
+	for(int i=0 ; i<a.length ; i++)
+	System.out.print(" "+a[i]);
+	
+	Scanner scan = new Scanner(System.in);
+	System.out.print("\n Enter a number : ");
+	int search = scan.nextInt();
+		
+	int n=a.length;
+
+	int beg=0;
+	int end=n-1;
+	int mid=(beg+end)/2;
+	while(beg <= end)
+      {
+	if(a[mid]== search)
+       {
+        System.out.println("\n** Match found **");
+	break;
+      }
+			
+	else if(search < a[mid])
+         {
+           end=mid;
+	   mid=(beg+end)/2;
+         }
+	 else
+         {
+	  beg = mid+1;
+	  mid=(beg+end)/2;
+	 }
+			
+	  if(beg>end)
+	  System.out.println("\n* Match not found *");
+	}
+		
+      }
+    }
+
+                 
