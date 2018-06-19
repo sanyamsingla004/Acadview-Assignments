@@ -1,0 +1,97 @@
+Q1 Reverse a string.
+Sol-class RevStr
+    {
+      public static void main(String s[])
+       {
+	StringBuffer str = new StringBuffer("!!weivdacA olleH!!");
+        str.reverse();
+        System.out.print("Reverse of string is : ");
+	System.out.println(str);
+       }
+     }
+Q2 Gentrate all substring of the string.
+Sol-class SubStr
+     {
+      public static void main(String arg[])
+        {
+		
+	  String s = "xyz";
+          char ch[] = s.toCharArray();
+	  String substr;
+       
+	  System.out.println("\n All Substrings are : ");
+	   
+	  for(int i=0 ;i<ch.length ; i++)
+          {
+	   for(int j=i+1 ; j<=ch.length ;j++)
+            {
+	     substr = s.substring(i, j);
+	     System.out.println(substr);
+            }
+           }
+
+	}
+      }
+Q3 Remove all vowels from string.
+Sol-class RmVovels
+    {
+      public static void main(String arg[])
+      {
+		
+      String s1 = "Acadview chandigarh!!";
+      String s2 = s1.replaceAll("[aeiouAEIOU]" , "");
+      System.out.println(s2);
+      }
+    }
+Q4 To print a,ab,abc pattern.
+Sol-class Pattern1
+     {
+       public static void main(String s[]){
+		
+       char ch=97;
+       for (int r=0 ; r<=3 ; r++){
+       for (int c = 0 ; c<=r ; c++)
+        {
+	 System.out.print(ch);
+	 ch++;
+	}
+	System.out.println();
+	ch=97;
+       }
+      }
+     }
+Q5 To check occurance of string into another string.
+Sol-class Occurance
+    {
+     public static void main(String arg[])
+     {
+		
+      String s1 = "akajsfsffaadfs fskfs";
+      String s2 = "fs";
+      boolean check = s1.contains(s2);
+      if(check)
+      System.out.println("String contained");
+     }
+   }
+Q6-To count the number of words in sentence.
+Sol-class Str
+    {
+      public static void main(String args[])
+       {
+		
+	String s = new String("    hello strings in java");
+	System.out.println(s);
+		
+	int count = 0;
+		
+	char ch[] = s.toCharArray();
+		
+	for(int i=0 ; i<ch.length ;i++)
+        {
+	 if(ch[i] != 32)
+	 count++;
+	}
+		
+	System.out.println(count);
+      }
+    }
