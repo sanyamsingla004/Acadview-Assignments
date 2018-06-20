@@ -1,0 +1,29 @@
+Q1 Use the text file and write its contents in another file.
+Sol-import java.io.*;
+
+    class FileSample2
+    {
+      public static void main(string args[])
+      {     
+       File f1=new File("C:\\Users\\hp7\\Desktop\\abc.txt");
+       File f2=new File("C:\\Users\\hp7\\Desktop\\sample.txt");
+     
+       try
+        {
+	 FileReader in=new FileReader(f1);
+	 FileWriter out=new FileWriter(f2);
+
+       	 int c;
+	
+	 while((c=in.read())!=-1)
+	 out.write((char)c);
+
+	 in.close();
+	 out.close();
+        }
+        catch(Exception e)
+        {
+	 e.printStackTrace();
+       }
+      }
+    }		     
