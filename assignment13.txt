@@ -1,0 +1,23 @@
+Q1 Multi thread program with a synchorized method to print values from 1 to 1000 using 2 thread.
+Sol-package threadexample;
+
+    class ThreadExample extends Thread
+     {
+       public static void main(String[] args) 
+   	{
+         ThreadExample t1=new ThreadExample();
+         ThreadExample t2=new ThreadExample();
+       
+         t1.start();
+         t2.start();
+       
+         t1.run();
+         t2.run();
+        }
+    
+    	public synchronized void run()
+    	 {
+          for(int i=0;i<1000;i++)
+          System.out.println(" "+i);
+         }
+       }
