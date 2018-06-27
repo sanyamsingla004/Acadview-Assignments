@@ -1,0 +1,50 @@
+Q1 Write java program compare two sets and retain elements which are same on both sets.
+Sol-package setdemo;
+
+    import java.util.HashSet;
+
+    public class SetDemo 
+    {
+     public static void main(String[] args)
+      {
+        HashSet hashset1=new HashSet();
+        hashset1.add("J");
+        hashset1.add("A");
+        hashset1.add("V");
+        hashset1.add("I");
+        
+        System.out.println(hashset1);
+        
+        
+        HashSet hashset2 = new HashSet();
+        hashset2.add("E");
+        hashset2.add("I");
+
+        System.out.println(hashset2);
+        
+        hashset1.retainAll(hashset2);
+        System.out.println(hashset1);
+        
+      }
+    
+    }
+
+Q2 Write java progrm in a HashMap.
+Sol-package hashmapdemo;
+
+    import java.util.HashMap;
+
+    public class HashMapDemo 
+    {
+     public static void main(String[] args)
+      {
+        HashMap myobject=new HashMap();
+        myobject.put("bread",20);
+        myobject.put("pizza",200);
+        myobject.put("pasta",100);
+        
+        myobject.replace("pasta",100,400);
+        System.out.println(myobject);
+       
+      }
+    }    
