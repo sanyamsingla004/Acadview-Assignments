@@ -1,0 +1,23 @@
+Q1 Create a dynamic array data structure that perform the actions of the ArrayList.It create anew array of size 2 times the previous size.
+Sol-package dynamicarray;
+    import java.util.ArrayList;
+
+    class Abc 
+    {
+     Abc(int size)
+      {
+        ArrayList ar=new ArrayList();
+        ar.add(1);
+        ar.ensureCapacity(2*size);
+      }
+     }
+
+     class DynamicArray
+     {
+      public static void main(String[] args) 
+       {
+        Abc obj=new Abc(10);
+       }
+    }
+Q2 Project-1 discussion.
+Sol-
