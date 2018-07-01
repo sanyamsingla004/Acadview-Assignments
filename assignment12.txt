@@ -1,0 +1,171 @@
+Q1 Create a program to input a date from the user in dd/mm/yyyy format and print in it english.
+Sol-package genricarray;
+import java.util.Arrays;
+
+class GenricArray
+{
+    public static <T> void sort(T[] arr)
+    {
+        Arrays.sort(arr);
+        for(T var :arr)
+        System.out.println(" " +var);
+    }
+   public static void main(String[] args) 
+   {
+       Integer[] intArr={1,3,6,5,87,56,8,90};
+       Character[] chArr={'a','B','K','A','X','T'};
+       Double[] dArr={1.1,1.2,3.1,6.1,4.5,6.9};
+       
+       System.out.print("\n Integer sorted array is : ");
+       sort(intArr);
+       
+       System.out.print("\n sorted array is : ");
+       sort(chArr);
+       
+       System.out.print("\n Integer sorted array is : ");
+       sort(dArr);
+        
+    }
+    
+}
+// this answer is wrong.
+
+Q2 Generic sorting function that can sort any type of array.
+Sol-package genricarray;
+    import java.util.Arrays;
+
+    class GenricArray
+    {
+     public static <T> void sort(T[] arr)
+      {
+        Arrays.sort(arr);
+        for(T var :arr)
+        System.out.println(" " +var);
+      }
+      public static void main(String[] args) 
+      {
+        Integer[] intArr={1,3,6,5,87,56,8,90};
+        Character[] chArr={'a','B','K','A','X','T'};
+        Double[] dArr={1.1,1.2,3.1,6.1,4.5,6.9};
+       
+        System.out.print("\n Integer sorted array is : ");
+        sort(intArr);
+       
+        System.out.print("\n sorted array is : ");
+        sort(chArr);
+       
+        System.out.print("\n Integer sorted array is : ");
+        sort(dArr);
+        
+      }
+    }
+
+Q3-Generic print function that can print all type of arrays.
+Sol-package genricprint;
+
+
+    public class GenricPrint 
+    {
+     public static <T> void printArr(T[] inputArray)
+     {
+        for(T var: inputArray)
+        System.out.print(" "+var);
+     }
+
+     public static void main(String[] args)
+     {
+        Integer[] intArr={1,3,5,76,98,45};
+        Character[] chArr={'a','b','v','x','x','T'};
+        Double[] dArr={1.1,3.1,6.3,8.5,2.1};
+    
+        System.out.print("\n Integer array is : ");
+        printArr(intArr);
+       
+        System.out.print("\n character array is : ");
+        printArr(chArr);
+       
+        System.out.print("\n double array is : ");
+        printArr(dArr);
+     }
+    
+   }
+
+Q4 Write a java program that sort list on the basis of age and name.
+Sol-package sortperson;
+
+import java.util.*;
+
+class Person
+{
+    String name;
+    int age;
+    
+    public Person(String name,int age)
+    {
+        this.name=name;
+        this.age=age;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    public int getAge()
+    {
+        return age;
+    }
+}
+
+class compAge implements comparator<Person>
+{
+    public int compare(Person p1,Person p2)
+    {
+        return p1.getAge()-p2.getAge();
+    }
+}
+class compName implements comparator<Person>
+{
+    public int compare(Person p1,Person p2)
+    {
+        return p1.getName().compareTo(p2.getName());
+    }
+}
+
+class SortPerson 
+{
+ public static void main(String[] args)
+ {
+     Person p1=new Person("abhishek" ,20);
+     Person p2=new Person("rajat",45);
+     Person p3=new Person("varun",37);
+     Person p4=new Person("anurag",40);
+     Person p5=new Person("rajan",42);
+     Person p6=new Person("sachin",25);
+     Person p7=new Person("joey",30);
+     
+     ArrayList<Person>aL=new ArrayList<>();
+     aL.add(p1);
+     aL.add(p2);
+     aL.add(p3);
+     aL.add(p4);
+     aL.add(p5);
+     aL.add(p6);
+     aL.add(p7);
+     
+     System.out.println("\n sort according to name..");
+     CompName name =new CompName();
+     collections.sort(aL,name);
+     
+     for(Person p :aL)
+     System.out.println("name : "+ p.getName()+"\t age : "+p.getAge());
+     
+     System.out.println("\n sort according to age..");
+     
+     compAge age=new compAge();
+     collections.sort(aL,age);
+     
+     for(Person p : aL)
+     System.out.println("name : "+p.getName() +"\t age : "+p.getAge());
+    }
+    
+}
